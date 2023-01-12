@@ -1,0 +1,60 @@
+{
+  "name": "文件上传",
+  "version": "1.0.0",
+  "description": "文件上传",
+  "guard": "-",
+  "group": "",
+  "paths": [
+    {
+      "path": "/UploadByFileApi",
+      "method": "POST",
+      "process": "flows.image",
+      "in": [
+        "$file.image"
+      ],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "/UploadByUrlApi",
+      "method": "POST",
+      "process": "flows.image1",
+      "in": [
+        "$payload.url"
+      ],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "/UploadByFileApi2",
+      "method": "POST",
+      "process": "fs.system.Upload",
+      "in": [
+        "$file.image"
+      ],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "/downloadfile",
+      "method": "GET",
+      "process": "fs.system.Download",
+      "in": [
+        "$query.name"
+      ],
+      "out": {
+        "status": 200,
+        "Headers": {
+          "Content-Type": "{{type}}"
+        },
+        "body": "{{content}}"
+      }
+    }
+  ]
+}

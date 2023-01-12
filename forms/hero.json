@@ -186,6 +186,15 @@
             "form": {
                   "头像": {
                         "bind": "avatar",
+                        "view": {
+                              "type": "Image",
+                              "compute": "Download",
+                              "props": {
+                                    "style": {
+                                          "borderRadius": "50%"
+                                    }
+                              }
+                        },
                         "edit": {
                               "type": "Upload",
                               "compute": "Upload",
@@ -322,8 +331,8 @@
                         "edit": {
                               "type": "RichText",
                               "props": {
-                                    "UploadByFileApi": "/api/UploadByFileApi",
-                                    "UploadByUrlApi": "/api/UploadByUrlApi"
+                                    "UploadByFileApi": "/api/file/UploadByFileApi",
+                                    "UploadByUrlApi": "/api/file/UploadByUrlApi"
                               }
                         }
                   },

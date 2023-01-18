@@ -10,15 +10,28 @@
             "primary": "id",
             "actions": [
                   {
+                        "title": "切换全屏",
+                        "icon": "icon-maximize-2",
+                        "showWhenAdd": true,
+                        "action": [
+                              {
+                                    "name": "Fullscreen",
+                                    "type": "Form.fullscreen",
+                                    "payload": {}
+                              }
+                        ]
+                  },
+                  {
                         "title": "添加英雄",
                         "icon": "icon-plus",
+                        "hideWhenEdit": true,
                         "action": [
                               {
                                     "name": "OpenModal",
                                     "type": "Common.openModal",
                                     "payload": {
-                                          "width": "40vw",
-                                          "isRef": false,
+                                          "width": "30vw",
+                                          "isRef": true,
                                           "Form": {
                                                 "type": "edit",
                                                 "model": "hero"
@@ -67,7 +80,7 @@
                         ]
                   },
                   {
-                        "title": "审核",
+                        "title": "跳转",
                         "icon": "icon-arrow-up",
                         "style": "primary",
                         "showWhenAdd": true,
@@ -78,13 +91,10 @@
                                     "payload": {}
                               },
                               {
-                                    "name": "Audit",
-                                    "type": "Service.test",
+                                    "name": "HistoryPush",
+                                    "type": "Common.historyPush",
                                     "payload": {
-                                          "method": "audit",
-                                          "args": [
-                                                "[[$Submit]]"
-                                          ]
+                                          "pathname": "/x/Form/hero/[[$Submit]]/view"
                                     }
                               },
                               {
@@ -167,11 +177,11 @@
                                           "width": 12
                                     },
                                     {
-                                          "name": "描述",
+                                          "name": "列表",
                                           "width": 24
                                     },
                                     {
-                                          "name": "列表",
+                                          "name": "描述",
                                           "width": 24
                                     }
                               ]
@@ -240,6 +250,7 @@
                               "type": "Select",
                               "props": {
                                     "mode": "multiple",
+                                    "extend": true,
                                     "xProps": {
                                           "$remote": {
                                                 "process": "yao.component.SelectOptions",
@@ -259,6 +270,7 @@
                               "type": "Select",
                               "props": {
                                     "mode": "multiple",
+                                    "showSearch": true,
                                     "options": [
                                           {
                                                 "label": "上单",

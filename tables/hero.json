@@ -182,9 +182,8 @@
                         ]
                   },
                   "props": {
-                        "scroll": {
-                              "x": 1800
-                        }
+                        "customStyle": "compact",
+                        "withTotalRow": true
                   }
             }
       },
@@ -261,6 +260,8 @@
                               "compute": "Download",
                               "props": {
                                     "style": {
+                                          "width": 36,
+                                          "height": 36,
                                           "borderRadius": "50%"
                                     }
                               }

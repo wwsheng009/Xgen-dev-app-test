@@ -12,7 +12,7 @@
 		"suppressImplicitAnyIndexErrors": true,
 		"baseUrl": ".",
 		"esModuleInterop": true,
-		"paths": { "@/*": ["./components/*"] },
+		"paths": { "@/*": ["./*"] },
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"jsx": "react-jsx"

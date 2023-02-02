@@ -102,7 +102,7 @@
                         },
                         {
                               "name": "操作难度",
-                              "width": 60
+                              "width": 160
                         },
                         {
                               "name": "价格（金币）",
@@ -328,11 +328,11 @@
                   "昵称": {
                         "bind": "title",
                         "view": {
-                              "type": "Text",
+                              "type": "public/view/Test",
                               "props": {}
                         },
                         "edit": {
-                              "type": "Input",
+                              "type": "public/edit/Input",
                               "props": {}
                         }
                   },
@@ -470,11 +470,11 @@
                   "操作难度": {
                         "bind": "difficulty",
                         "view": {
-                              "type": "Text",
+                              "type": "public/view/Rate",
                               "props": {}
                         },
                         "edit": {
-                              "type": "InputNumber",
+                              "type": "public/edit/Rate",
                               "props": {}
                         }
                   },

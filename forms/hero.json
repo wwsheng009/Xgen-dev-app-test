@@ -252,7 +252,7 @@
                   "昵称": {
                         "bind": "title",
                         "edit": {
-                              "type": "Input",
+                              "type": "public/edit/Input",
                               "props": {}
                         }
                   },
@@ -338,7 +338,7 @@
                   "操作难度": {
                         "bind": "difficulty",
                         "edit": {
-                              "type": "InputNumber",
+                              "type": "public/edit/Rate",
                               "props": {}
                         }
                   },

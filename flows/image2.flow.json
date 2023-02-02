@@ -1,0 +1,14 @@
+{
+    "label": "upload file",
+    "version": "1.0.0",
+    "description": "upload image file",
+    "nodes": [
+       
+    ],
+    "output": {
+        "success": 1,
+        "file": {
+            "url": "{{$in.0}}"
+        }
+    }
+}

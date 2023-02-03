@@ -27,7 +27,7 @@ export default defineConfig({
 		preserveModules: true,
 		format: 'systemjs'
 	},
-	external: ['antd','react', 'react-dom', 'react/jsx-runtime'],
+	external: ['antd','react', 'react-dom', 'react/jsx-runtime','ahooks'],
 
 	// When using tsyringe, this item needs to be set
 	context: 'false'

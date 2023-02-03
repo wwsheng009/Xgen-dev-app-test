@@ -202,6 +202,10 @@
                                     {
                                           "name": "描述",
                                           "width": 24
+                                    },
+                                    {
+                                          "name": "描述2",
+                                          "width": 24
                                     }
                               ]
                         }
@@ -357,6 +361,16 @@
                         }
                   },
                   "描述": {
+                        "bind": "desc",
+                        "edit": {
+                              "type": "CodeEditor",
+                              "props": {
+                                    "language": "javascript",
+                                    "height": 200
+                              }
+                        }
+                  },
+                  "描述2": {
                         "bind": "desc",
                         "edit": {
                               "type": "RichText",

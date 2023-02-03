@@ -10,11 +10,11 @@ export const plugins = [nodeResolve()]
 
 export default defineConfig({
 	input: Object.fromEntries(
-		glob.sync('components/**/*.ts*').map(file => [
+		glob.sync('components/components/**/*.ts*').map(file => [
 			// This remove `src/` as well as the file extension from each
 			// file, so e.g. src/nested/foo.js becomes nested/foo
 			path.relative(
-				'components',
+				'components/components',
 				file.slice(0, file.length - path.extname(file).length)
 			),
 			// This expands the relative paths to absolute paths, so e.g.

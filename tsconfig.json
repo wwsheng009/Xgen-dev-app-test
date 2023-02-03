@@ -3,7 +3,10 @@
 		"target": "ES2022",
 		"module": "ESNext",
 		"skipLibCheck": true,
-		"lib": ["ESNEXT", "DOM"],
+		"lib": [
+			"ESNEXT",
+			"DOM"
+		],
 		"moduleResolution": "Node",
 		"declaration": true,
 		"emitDeclarationOnly": true,
@@ -12,10 +15,22 @@
 		"suppressImplicitAnyIndexErrors": true,
 		"baseUrl": ".",
 		"esModuleInterop": true,
-		"paths": { "@/*": ["./*"] },
+		"paths": {
+			"@/*": [
+				"./components/*"
+			]
+		},
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"jsx": "react-jsx"
+		"jsx": "react-jsx",
+		"typeRoots": [
+			"./node_modules/@types",
+			"./components/typings"
+		]
 	},
-	"include": ["components"]
+	"include": [
+		"components/**/*.ts",
+		"components/**/*.tsx",
+		"components/typings/**/*.d.ts"
+	]
 }

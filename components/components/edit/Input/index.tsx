@@ -1,4 +1,4 @@
-import { Rate, RateProps } from 'antd'
+import { Input } from 'antd'
 import type { FormItemProps } from 'antd'
 import { Item } from '@/components'
 // import { getLocale } from '@umijs/max'
@@ -16,16 +16,18 @@ interface Props {
 interface PropsEditComponent extends Props {
     itemProps?: FormItemProps
 }
-interface IProps extends RateProps, PropsEditComponent {}
+interface IProps extends InputProps, PropsEditComponent {}
 
 const Index = (props: IProps) => {
 	const { __bind, __name, itemProps, ...rest_props } = props
+	const is_cn = true
 
 	return (
 		<Item {...itemProps} {...{ __bind, __name }}>
-			<Rate  {...rest_props}></Rate>
+			<Input placeholder={`${is_cn ? '请输入' : 'Please input '}${__name}`} {...rest_props}></Input>
 		</Item>
 	)
 }
 
-export default Index
+export default window.$app.memo(Index)
+

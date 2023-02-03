@@ -33,4 +33,4 @@ const Index = (props: IProps) => {
 	)
 }
 
-export default Index
+export default window.$app.memo(Index)

@@ -12,4 +12,4 @@ const Index = (props: IProps) => {
 	return <Rate value = {__value} ></Rate>
 }
 
-export default Index
+export default window.$app.memo(Index)

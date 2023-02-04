@@ -17,7 +17,27 @@
       },
       "layout": {
             "primary": "id",
-            "header": {},
+            "header": {
+                  "preset": {
+                        "batch": {
+                              "columns": [
+                                    {
+                                          "name": "角色名称"
+                                    }
+                              ]
+                        },
+                        "import": {
+                              "name": "role",
+                              "actions": [
+                                    {
+                                          "name": "import",
+                                          "title": "导入",
+                                          "icon": "icon-import"
+                                    }
+                              ]
+                        }
+                  }
+            },
             "filter": {
                   "columns": [
                         {

@@ -1,0 +1,149 @@
+{
+    "name": "Role List",
+    "action": {
+        "bind": {
+            "model": "",
+            "option": {}
+        },
+        "search": {},
+        "find": {},
+        "get": {},
+        "save": {},
+        "delete": {}
+    },
+    "layout": {
+        "primary": "id",
+        "header": {
+            "preset": {}
+        },
+        "filter": {
+            "columns": [
+                {
+                    "name": "名称",
+                    "width": 4
+                }
+            ]
+        },
+        "table": {
+            "columns": [
+                {
+                    "name": "名称"
+                },
+                {
+                    "name": "字段"
+                },
+                {
+                    "name": "坐标"
+                },
+                {
+                    "name": "标签"
+                },
+                {
+                    "name": "规则"
+                }
+            ],
+            "operation": {
+                "fold": false,
+                "width": 60,
+                "actions": [
+                    {
+                        "title": "查看",
+                        "icon": "icon-eye",
+                        "action": {
+                            "Common.openModal": {
+                                "width": 640,
+                                "Form": {
+                                    "type": "view",
+                                    "model": "role"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "title": "编辑",
+                        "icon": "icon-edit-2",
+                        "action": {
+                            "Common.openModal": {
+                                "Form": {
+                                    "type": "edit",
+                                    "model": "role"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "title": "删除",
+                        "icon": "icon-trash-2",
+                        "action": {
+                            "Table.delete": {}
+                        },
+                        "style": "danger",
+                        "confirm": {
+                            "title": "提示",
+                            "desc": "确认删除，删除后数据无法恢复？"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "fields": {
+        "table": {
+            "名称": {
+                "bind": "name",
+                "view": {
+                    "type": "Text",
+                    "props": {}
+                },
+                "edit": {
+                    "type": "Input",
+                    "props": {}
+                }
+            },
+            "字段": {
+                "bind": "field",
+                "view": {
+                    "type": "Text",
+                    "props": {}
+                },
+                "edit": {
+                    "type": "Input",
+                    "props": {}
+                }
+            },
+            "坐标": {
+                "bind": "axis",
+                "view": {
+                    "type": "Text",
+                    "props": {}
+                },
+                "edit": {
+                    "type": "Input",
+                    "props": {}
+                }
+            },
+            "标签": {
+                "bind": "label",
+                "view": {
+                    "type": "Text",
+                    "props": {}
+                },
+                "edit": {
+                    "type": "Input",
+                    "props": {}
+                }
+            },
+            "规则": {
+                "bind": "rules",
+                "view": {
+                    "type": "Tag",
+                    "props": {}
+                },
+                "edit": {
+                    "type": "Select",
+                    "props": {}
+                }
+            }
+        }
+    }
+}

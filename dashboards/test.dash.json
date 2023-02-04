@@ -9,11 +9,27 @@
             "full": true
       },
       "layout": {
+            "filter": {
+                  "columns": [
+                        {
+                              "name": "测试"
+                        }
+                  ]
+            },
             "dashboard": {
                   "columns": [
                         {
                               "name": "英雄列表",
                               "width": 24
+                        },
+                        {
+                              "name": "图表11",
+                              "width": 12,
+                              "rows": [
+                                    {
+                                          "name": "图表展示1"
+                                    }
+                              ]
                         },
                         {
                               "name": "图表展示1",
@@ -27,6 +43,17 @@
             }
       },
       "fields": {
+            "filter": {
+                  "测试": {
+                        "id": "x",
+                        "key": "x",
+                        "bind": "chart_test_2",
+                        "edit": {
+                              "bind": "chart_test_1",
+                              "type": "Select"
+                        }
+                  }
+            },
             "dashboard": {
                   "英雄列表": {
                         "view": {

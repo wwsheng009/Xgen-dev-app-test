@@ -10,11 +10,11 @@ export const plugins = [nodeResolve()]
 
 export default defineConfig({
 	input: Object.fromEntries(
-		glob.sync('components/components/**/*.ts*').map(file => [
+		glob.sync('components/**/*.ts*').map((file: string) => [
 			// This remove `src/` as well as the file extension from each
 			// file, so e.g. src/nested/foo.js becomes nested/foo
 			path.relative(
-				'components/components',
+				'components',
 				file.slice(0, file.length - path.extname(file).length)
 			),
 			// This expands the relative paths to absolute paths, so e.g.
@@ -23,11 +23,11 @@ export default defineConfig({
 		])
 	),
 	output: {
-		dir: 'public/components',
+		dir: '../public/components',
 		preserveModules: true,
 		format: 'systemjs'
 	},
-	external: ['antd','react', 'react-dom', 'react/jsx-runtime','ahooks'],
+	external: ['antd', 'react', 'react-dom', 'react/jsx-runtime', 'ahooks'],
 
 	// When using tsyringe, this item needs to be set
 	context: 'false'

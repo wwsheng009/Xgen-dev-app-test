@@ -11,13 +11,13 @@
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"strict": true,
-		"outDir": "public/components",
+		"outDir": "../public/components",
 		"suppressImplicitAnyIndexErrors": true,
 		"baseUrl": ".",
 		"esModuleInterop": true,
 		"paths": {
 			"@/*": [
-				"./components/*"
+				"./*"
 			]
 		},
 		"emitDecoratorMetadata": true,
@@ -25,12 +25,12 @@
 		"jsx": "react-jsx",
 		"typeRoots": [
 			"./node_modules/@types",
-			"./components/typings"
+			"./typings"
 		]
 	},
 	"include": [
-		"components/**/*.ts",
-		"components/**/*.tsx",
-		"components/typings/**/*.d.ts"
+		"./**/*.ts",
+		"./**/*.tsx",
+		"./typings/**/*.d.ts"
 	]
 }

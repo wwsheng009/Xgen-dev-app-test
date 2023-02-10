@@ -5,7 +5,7 @@
 
 只适合增加一些没有远程加载的插件，比如增强显示。
 
-不适合复杂的插件增强，特别是有第三方依赖库的。
+不适合复杂的插件增强，特别是有大量第三方依赖库的。如果增加新的控件依赖，需要在xgen框架里注入库文件。
 
 依赖库需要xgen主框加的配合，xgen本身只支持导入'react', 'react-dom', 'react/jsx-runtime'，自调整版本增加了antd控件库,其它控件依赖需要调整xgen框架中的代码packages/xgen/utils/preset/system_modules.ts
 

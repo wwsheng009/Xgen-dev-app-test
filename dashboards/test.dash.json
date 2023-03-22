@@ -1,126 +1,126 @@
 {
-      "name": "自由页面展示",
-      "action": {
-            "data": {
-                  "process": "scripts.dashboard.dataSource"
+  "name": "自由页面展示",
+  "action": {
+    "data": {
+      "process": "scripts.dashboard.dataSource"
+    }
+  },
+  "config": {
+    "full": true
+  },
+  "layout": {
+    "filter": {
+      "columns": [
+        {
+          "name": "测试"
+        }
+      ]
+    },
+    "dashboard": {
+      "columns": [
+        {
+          "name": "英雄列表",
+          "width": 24
+        },
+        {
+          "name": "图表11",
+          "width": 12,
+          "rows": [
+            {
+              "name": "图表展示1"
             }
-      },
-      "config": {
-            "full": true
-      },
-      "layout": {
-            "filter": {
-                  "columns": [
-                        {
-                              "name": "测试"
-                        }
-                  ]
-            },
-            "dashboard": {
-                  "columns": [
-                        {
-                              "name": "英雄列表",
-                              "width": 24
-                        },
-                        {
-                              "name": "图表11",
-                              "width": 12,
-                              "rows": [
-                                    {
-                                          "name": "图表展示1"
-                                    }
-                              ]
-                        },
-                        {
-                              "name": "图表展示1",
-                              "width": 12
-                        },
-                        {
-                              "name": "图表展示2",
-                              "width": 12
-                        }
-                  ]
-            }
-      },
-      "fields": {
-            "filter": {
-                  "测试": {
-                        "id": "x",
-                        "key": "x",
-                        "bind": "chart_test_2",
-                        "edit": {
-                              "bind": "chart_test_1",
-                              "type": "Select"
-                        }
-                  }
-            },
-            "dashboard": {
-                  "英雄列表": {
-                        "view": {
-                              "type": "base/Table",
-                              "props": {
-                                    "model": "hero",
-                                    "onChangeEvent": true
-                              }
-                        }
-                  },
-                  "图表展示1": {
-                        "bind": "chart_test_1",
-                        "view": {
-                              "type": "chart/NumberChart",
-                              "props": {
-                                    "height": 240,
-                                    "prefix": "¥",
-                                    "decimals": 2,
-                                    "nameKey": "date",
-                                    "valueKey": "value"
-                              }
-                        }
-                  },
-                  "图表展示2": {
-                        "bind": "chart_test_2",
-                        "view": {
-                              "type": "chart/LineBar",
-                              "props": {
-                                    "height": 240,
-                                    "nameKey": "name",
-                                    "axisLabel": {
-                                          "interval": 0,
-                                          "fontSize": 12
-                                    },
-                                    "series": [
-                                          {
-                                                "valueKey": "stay",
-                                                "type": "line",
-                                                "smooth": true,
-                                                "symbolSize": 8,
-                                                "itemStyle": {
-                                                      "borderRadius": 6
-                                                },
-                                                "splitLine": {
-                                                      "show": false
-                                                },
-                                                "axisLabel": {
-                                                      "show": false
-                                                }
-                                          },
-                                          {
-                                                "valueKey": "cost",
-                                                "type": "bar",
-                                                "itemStyle": {
-                                                      "borderRadius": 6
-                                                },
-                                                "splitLine": {
-                                                      "show": false
-                                                },
-                                                "axisLabel": {
-                                                      "show": false
-                                                }
-                                          }
-                                    ]
-                              }
-                        }
-                  }
-            }
+          ]
+        },
+        {
+          "name": "图表展示1",
+          "width": 12
+        },
+        {
+          "name": "图表展示2",
+          "width": 12
+        }
+      ]
+    }
+  },
+  "fields": {
+    "filter": {
+      "测试": {
+        "id": "x",
+        "key": "x",
+        "bind": "chart_test_2",
+        "edit": {
+          "bind": "chart_test_1",
+          "type": "Select"
+        }
       }
+    },
+    "dashboard": {
+      "英雄列表": {
+        "view": {
+          "type": "base/Table",
+          "props": {
+            "model": "hero",
+            "onChangeEvent": true
+          }
+        }
+      },
+      "图表展示1": {
+        "bind": "chart_test_1",
+        "view": {
+          "type": "chart/NumberChart",
+          "props": {
+            "height": 240,
+            "prefix": "¥",
+            "decimals": 2,
+            "nameKey": "date",
+            "valueKey": "value"
+          }
+        }
+      },
+      "图表展示2": {
+        "bind": "chart_test_2",
+        "view": {
+          "type": "chart/LineBar",
+          "props": {
+            "height": 240,
+            "nameKey": "name",
+            "axisLabel": {
+              "interval": 0,
+              "fontSize": 12
+            },
+            "series": [
+              {
+                "valueKey": "stay",
+                "type": "line",
+                "smooth": true,
+                "symbolSize": 8,
+                "itemStyle": {
+                  "borderRadius": 6
+                },
+                "splitLine": {
+                  "show": false
+                },
+                "axisLabel": {
+                  "show": false
+                }
+              },
+              {
+                "valueKey": "cost",
+                "type": "bar",
+                "itemStyle": {
+                  "borderRadius": 6
+                },
+                "splitLine": {
+                  "show": false
+                },
+                "axisLabel": {
+                  "show": false
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
 }

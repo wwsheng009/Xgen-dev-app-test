@@ -1,13 +1,13 @@
 {
-    "label": "upload file",
-    "version": "1.0.0",
-    "description": "upload image file",
-    "nodes": [
-        {
-            "name": "wget",
-            "script":"download",
-            "args": ["{{$in.0}}"]
-        }
-    ],
-    "output": "{{$res.wget}}"
+  "label": "upload file",
+  "version": "1.0.0",
+  "description": "upload image file",
+  "nodes": [
+    {
+      "name": "wget",
+      "script": "download",
+      "args": ["{{$in.0}}"]
+    }
+  ],
+  "output": "{{$res.wget}}"
 }

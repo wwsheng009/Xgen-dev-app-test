@@ -202,11 +202,11 @@
               "width": 24
             },
             {
-              "name": "描述22",
+              "name": "代码",
               "width": 24
             },
             {
-              "name": "描述2",
+              "name": "描述",
               "width": 24
             }
           ]
@@ -375,8 +375,8 @@
           "props": {}
         }
       },
-      "描述": {
-        "bind": "desc",
+      "代码": {
+        "bind": "code",
         "edit": {
           "type": "CodeEditor",
           "props": {
@@ -385,7 +385,7 @@
           }
         }
       },
-      "描述2": {
+      "描述": {
         "bind": "desc",
         "edit": {
           "type": "RichText",

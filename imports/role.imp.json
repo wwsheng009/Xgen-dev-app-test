@@ -6,28 +6,18 @@
     {
       "label": "角色名称",
       "name": "name",
-      "match": [
-        "名称"
-      ],
-      "rules": [
-        "scripts.imports.validate.Require"
-      ]
+      "match": ["名称"],
+      "rules": ["scripts.imports.validate.Require"]
     },
     {
       "label": "角色类型",
       "name": "type",
-      "match": [
-        "类型"
-      ],
-      "rules": [
-        "scripts.imports.getter.Type"
-      ]
+      "match": ["类型"],
+      "rules": ["scripts.imports.getter.Type"]
     }
   ],
   "option": {
-    "autoMatching": true,
     "chunkSize": 20,
-    "logging": "error",
     "mappingPreview": "auto",
     "dataPreview": "auto",
     "templateLink": "/somelinke/download/xxx"

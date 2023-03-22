@@ -9,9 +9,7 @@
       "path": "/upload",
       "method": "POST",
       "process": "fs.system.Upload",
-      "in": [
-        "$file.file"
-      ],
+      "in": ["$file.file"],
       "out": {
         "status": 200,
         "type": "application/json"
@@ -21,10 +19,7 @@
       "path": "/readfile",
       "method": "GET",
       "process": "fs.system.Download",
-      "in": [
-        "$query.name",
-        "$query.encode"
-      ],
+      "in": ["$query.name", "$query.encode"],
       "out": {
         "status": 200,
         "type": "application/json"
@@ -35,11 +30,7 @@
       "method": "GET",
       "guard": "-",
       "process": "xiang.fs.GetURL",
-      "in": [
-        "$query.name",
-        "$query.type",
-        "$query.token"
-      ],
+      "in": ["$query.name", "$query.type", "$query.token"],
       "out": {
         "status": 200,
         "type": "image/png"
@@ -49,9 +40,7 @@
       "path": "/token",
       "method": "GET",
       "process": "xiang.fs.GetToken",
-      "in": [
-        "$query.name"
-      ],
+      "in": ["$query.name"],
       "out": {
         "status": 200,
         "type": "application/json"

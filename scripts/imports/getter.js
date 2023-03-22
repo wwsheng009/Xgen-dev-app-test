@@ -7,4 +7,3 @@ function Type(value, row) {
   }
   return row;
 }
-

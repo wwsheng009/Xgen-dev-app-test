@@ -1,4 +1,3 @@
 function main(args, out, res) {
-  return "/api/file/downloadfile?name=" + out
-  }
-  
+  return "/api/file/downloadfile?name=" + out;
+}

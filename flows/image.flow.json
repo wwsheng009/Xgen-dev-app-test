@@ -1,26 +1,24 @@
 {
-    "label": "upload file",
-    "version": "1.0.0",
-    "description": "upload image file",
-    "nodes": [
-        {
-            "name":"getdata",
-            "script":"getdata",
-            "args": ["{{$in}}"]
-        },
-        {
-            "name": "upload",
-            "process": "fs.system.upload",
-            "script": "format",
-            "args": [
-                "{{$in.0}}"
-            ]
-        }
-    ],
-    "output": {
-        "success": 1,
-        "file": {
-            "url": "{{$res.upload}}"
-        }
+  "label": "upload file",
+  "version": "1.0.0",
+  "description": "upload image file",
+  "nodes": [
+    {
+      "name": "getdata",
+      "script": "getdata",
+      "args": ["{{$in}}"]
+    },
+    {
+      "name": "upload",
+      "process": "fs.system.upload",
+      "script": "format",
+      "args": ["{{$in.0}}"]
     }
+  ],
+  "output": {
+    "success": 1,
+    "file": {
+      "url": "{{$res.upload}}"
+    }
+  }
 }

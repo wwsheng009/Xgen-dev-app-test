@@ -96,5 +96,13 @@
       "fileMatch": ["/**/*.dash.json", "/**/*.dash.yao"],
       "url": "https://raw.githubusercontent.com/wwsheng009/yao-app-ts-types/main/json-schemas/0.10.3/dashboard.json"
     }
+  ],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "yaodb",
+      "database": "data/yao.db"
+    }
   ]
 }

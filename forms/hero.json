@@ -106,7 +106,7 @@
     ],
     "form": {
       "props": {
-        "onLoadSync": false,
+        "onLoadSync": true,
         "reference": {
           "flatContent": {
             "name": "参照",
@@ -292,10 +292,12 @@
                 }
               }
             },
+
             "$on:change": {
               "process": "scripts.event.OnChange",
               "query": {
-                "extra": "开发者定义数据"
+                "extra": "开发者定义数据",
+                "id": "{{id}}"
               }
             }
           }
